@@ -696,12 +696,14 @@ font-weight: var(--fw-500);
     opacity: 1;
     visibility: visible;
 }
-.header .navbar-nav .nav-item.childlink .childlink-group li a:hover{
+.header .navbar-nav .nav-item.childlink .childlink-group li a:hover,
+.header .navbar-nav .nav-item.childlink .childlink-group li a.active{
     padding-left: 18px;
     color: var(--secondary);
     background-color: var(--primary);
 }
-.header .navbar-nav .nav-item.childlink .childlink-group li a:hover::before{
+.header .navbar-nav .nav-item.childlink .childlink-group li a:hover::before,
+.header .navbar-nav .nav-item.childlink .childlink-group li a.active::before{
     width: 15px;
 }
 .header .navbar-nav .nav-item.childlink .childlink-group li a::before{
@@ -933,7 +935,7 @@ font-weight: var(--fw-600);
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: var(--white) !important;
+    background: var(--secondary) !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -942,6 +944,9 @@ font-weight: var(--fw-600);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+}
+.navcenter.themenav .owl-nav button{
+    background: var(--white) !important;
 }
 .navcenter .owl-nav button.owl-prev {
     left: -25px;

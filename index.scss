@@ -28,53 +28,6 @@
     & p {
         color: var(--primary);
     }
-    & form {
-        & .searchgroup {
-            border-style: solid;
-            border-width: 2px;
-            border-color: var(--yellow-color);
-            display: -webkit-inline-box;
-            display: -webkit-inline-flex;
-            display: -ms-inline-flexbox;
-            background-color: var(--white);
-            display: inline-flex;
-            -webkit-box-align: center;
-            -webkit-align-items: center;
-            -ms-flex-align: center;
-            align-items: center;
-            gap: 5px;
-            // box-shadow: 5px 5px 0px 0px var(--border-color);
-            -webkit-transition: var(--ease-transition);
-            transition: var(--ease-transition);
-            border-radius: 8px;
-            overflow: hidden;
-            & .form-control {
-                padding: 10px 20px;
-            }
-            & .form-control,
-            & .searchBtn {
-                height: 50px;
-                font-size: 16px;
-                font-weight: var(--fw-500);
-            }
-            & .searchBtn {
-                position: relative;
-                z-index: 6;
-                border: none;
-                // width: 50px;
-                background-color: var(--yellow-color);
-                color: var(--white) !important;
-                font-weight: var(--fw-400);
-                & img {
-                    width: 20px;
-                    filter: invert(1);
-                }
-            }
-            &:hover {
-                box-shadow: 5px 5px 0px 0px var(--yellow-color);
-            }
-        }
-    }
     //
     & .innerfluid {
         border-radius: var(--rounded-40);
@@ -104,6 +57,54 @@
             100% {
                 transform: rotate(0deg);
             }
+        }
+    }
+}
+
+form {
+    & .searchgroup {
+        border-style: solid;
+        border-width: 2px;
+        border-color: var(--yellow-color);
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+        background-color: var(--white);
+        display: inline-flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        gap: 5px;
+        // box-shadow: 5px 5px 0px 0px var(--border-color);
+        -webkit-transition: var(--ease-transition);
+        transition: var(--ease-transition);
+        border-radius: 8px;
+        overflow: hidden;
+        & .form-control {
+            padding: 10px 20px;
+        }
+        & .form-control,
+        & .searchBtn {
+            height: 50px;
+            font-size: 16px;
+            font-weight: var(--fw-500);
+        }
+        & .searchBtn {
+            position: relative;
+            z-index: 6;
+            border: none;
+            // width: 50px;
+            background-color: var(--yellow-color);
+            color: var(--white) !important;
+            font-weight: var(--fw-400);
+            & img {
+                width: 20px;
+                filter: invert(1);
+            }
+        }
+        &:hover {
+            box-shadow: 5px 5px 0px 0px var(--yellow-color);
         }
     }
 }
@@ -1353,7 +1354,7 @@
             justify-content: center;
             height: 100%;
             opacity: 1 !important;
-            background-color: var(--dark-shadow);
+            background-color: var(--videobtn);
             transform: translateY(100%);
             transition: var(--ease-transition);
             font-size: 30px;
@@ -1578,6 +1579,53 @@
     }
 }
 
+// pagespeed
+.pagespeed {
+    & .innerfluid {
+        background: url(../images/cover-bg-2.jpg) no-repeat center;
+        background-size: cover;
+        & .counter {
+            color: var(--white);
+            & .counters {
+                color: var(--yellow-color);
+            }
+        }
+    }
+}
+
+
+// **** Error Page 
+.errorsection {
+    background: url(../images/herobg.jpg) no-repeat bottom;
+    background-size: cover;
+    overflow: hidden;
+    & .navbar {
+        position: unset;
+    }
+    & .errorfield {
+        & .card{
+            border-radius: var(--rounded-40);
+            -webkit-backdrop-filter: blur(50px);
+            backdrop-filter: blur(50px);
+            background: linear-gradient(90deg, rgba(252, 239, 244, 0.33) 0%, rgba(246, 196, 209, 0.21) 100%);
+            position: relative;
+            & .card-body{
+                text-align: center;
+                & .error {
+                    font-size: 10vw;
+                }
+            }
+            & .robot{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 120px;
+                height: 120px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1199px) {
     .herosection {
         & .mainheading {
@@ -1589,17 +1637,17 @@
                 margin-bottom: 20px;
             }
         }
-        & form {
-            & .searchgroup {
-                & .form-control,
-                & .searchBtn {
-                    height: 50px;
-                }
-                & .searchBtn {
-                    // width: 50px;
-                    & img {
-                        width: 20px;
-                    }
+    }
+    form {
+        & .searchgroup {
+            & .form-control,
+            & .searchBtn {
+                height: 50px;
+            }
+            & .searchBtn {
+                // width: 50px;
+                & img {
+                    width: 20px;
                 }
             }
         }
@@ -1638,16 +1686,16 @@
         & .mainheading {
             // margin-bottom: 20px;
         }
-        & form {
-            & .searchgroup {
-                & .form-control,
-                & .searchBtn {
-                    height: 45px;
-                }
-                & .searchBtn {
-                    & img {
-                        width: 20px;
-                    }
+    }
+    form {
+        & .searchgroup {
+            & .form-control,
+            & .searchBtn {
+                height: 45px;
+            }
+            & .searchBtn {
+                & img {
+                    width: 20px;
                 }
             }
         }
@@ -1762,16 +1810,16 @@
         & .innerfluid {
             padding: 30px;
         }
-        & form {
-            & .searchgroup {
-                & .form-control,
-                & .searchBtn {
-                    height: 40px;
-                }
-                // & .searchBtn {
-                //     width: 40px;
-                // }
+    }
+    form {
+        & .searchgroup {
+            & .form-control,
+            & .searchBtn {
+                height: 40px;
             }
+            // & .searchBtn {
+            //     width: 40px;
+            // }
         }
     }
     // musiccard
@@ -1902,4 +1950,21 @@
             }
         }
     }
+
+// **** Error Page 
+.errorsection {
+    & .errorfield {
+        & .card{
+            & .card-body{
+                & .error {
+                    font-size: 20vw;
+                }
+            }
+            & .robot{
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+}
 }
