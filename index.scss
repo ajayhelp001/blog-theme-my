@@ -1600,7 +1600,7 @@ form {
     background-size: cover;
     overflow: hidden;
     & .navbar {
-        position: unset;
+        position: relative;
     }
     & .errorfield {
         & .card{
