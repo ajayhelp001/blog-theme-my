@@ -80,7 +80,6 @@
 	:root{
 		--heading-1: 35px;
 		--heading-2: 28px;
-		--heading-3: 22px;
 		--heading-4: 18px;
 		--heading-5: 16px;
 	}
@@ -109,6 +108,7 @@
 @media screen and (max-width:575px){
 	:root{
 		--heading-1: 30px;
+		--heading-3: 22px;
 		/* --heading-6: 14px; */
 	}
 	.heading {
