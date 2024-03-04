@@ -725,8 +725,8 @@ form {
     }
 }
 
-// recentartical-card
-.recentartical-card {
+// recentarticle-card
+.recentarticle-card {
     border: 0px;
     border-radius: 0px;
     transition: var(--ease-transition);
@@ -1089,7 +1089,7 @@ form {
     }
 }
 
-.recentartical {
+.recentarticle {
     & .clientimg {
         border-radius: 10px;
         overflow: hidden;
@@ -1842,7 +1842,7 @@ form {
         }
     }
     //
-    .recentartical-card {
+    .recentarticle-card {
         & .card-body {
             & .innerbody {
                 & .titles {
@@ -1980,7 +1980,7 @@ form {
         }
     }
     //
-    .recentartical-card {
+    .recentarticle-card {
         & .card-body {
             & .innerbody {
                 & p {
@@ -2027,8 +2027,8 @@ form {
         }
     }
 
-    // recentartical-card
-    .recentartical-card {
+    // recentarticle-card
+    .recentarticle-card {
         height: unset !important;
         & .card-body {
             padding: 12px;
