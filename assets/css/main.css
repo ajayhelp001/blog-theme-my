@@ -256,7 +256,7 @@ body{
     line-height: 21px;
     color: var(--body-text-color);
     transition: var(--ease-transition);
-    scroll-behavior: smooth 5s;
+    scroll-behavior: smooth;
 }
 a{	
     text-decoration: none;
@@ -2321,6 +2321,7 @@ form .searchgroup:hover {
 
 .gallerysection .gallery-items {
     overflow: hidden;
+    border-radius: var(--rounded-20);
 }
 
 .gallerysection .gallery-items img {
