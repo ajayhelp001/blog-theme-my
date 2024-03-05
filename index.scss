@@ -65,7 +65,7 @@ form {
     & .searchgroup {
         border-style: solid;
         border-width: 2px;
-        border-color: var(--yellow-color);
+        border-color: var(--light-blue-color);
         display: -webkit-inline-box;
         display: -webkit-inline-flex;
         display: -ms-inline-flexbox;
@@ -95,7 +95,7 @@ form {
             z-index: 6;
             border: none;
             // width: 50px;
-            background-color: var(--yellow-color);
+            background-color: var(--light-blue-color);
             color: var(--white) !important;
             font-weight: var(--fw-400);
             & img {
@@ -104,7 +104,7 @@ form {
             }
         }
         &:hover {
-            box-shadow: 5px 5px 0px 0px var(--yellow-color);
+            box-shadow: 5px 5px 0px 0px var(--light-blue-color);
         }
     }
 }
@@ -114,7 +114,7 @@ form {
         display: inline-flex;
         padding: 5px 10px;
         border-radius: 4px;
-        background: var(--yellow-color);
+        background: var(--light-blue-color);
         color: var(--white);
         font-weight: var(--fw-500);
         font-size: 14px;
@@ -196,7 +196,7 @@ form {
             left: unset;
             transition: var(--ease-transition);
             text-transform: uppercase;
-            background-color: var(--yellow-color);
+            background-color: var(--light-blue-color);
             color: var(--white);
         }
     }
@@ -567,7 +567,7 @@ form {
         }
         & .card-body {
             & .titles {
-                color: var(--yellow-color) !important;
+                color: var(--light-blue-color) !important;
             }
         }
     }
@@ -829,7 +829,7 @@ form {
             & .userdetaisl {
                 & .username {
                     & a {
-                        color: var(--yellow-color);
+                        color: var(--light-blue-color);
                     }
                 }
             }
@@ -878,7 +878,7 @@ form {
             border-bottom: 1px solid var(--gray-color);
             padding: 1rem 1.25rem;
             & h6 {
-                color: var(--yellow-color);
+                color: var(--light-blue-color);
                 font-weight: var(--fw-500);
             }
         }
@@ -999,8 +999,8 @@ form {
                         &:hover {
                             & .leftside {
                                 & .discriptions {
-                                    color: var(--yellow-color);
-                                    border-color: var(--yellow-color);
+                                    color: var(--light-blue-color);
+                                    border-color: var(--light-blue-color);
                                 }
                             }
                         }
@@ -1269,7 +1269,7 @@ form {
         & p {
             & span {
                 font-weight: var(--fw-500);
-                color: var(--yellow-color) !important;
+                color: var(--light-blue-color) !important;
             }
         }
         &.rightside {
@@ -1297,7 +1297,7 @@ form {
             height: 100px;
         }
         & .replybtn {
-            color: var(--yellow-color) !important;
+            color: var(--light-blue-color) !important;
             border: none;
         }
         & .commentusername {
@@ -1407,11 +1407,11 @@ form {
             & .play-btn {
                 width: 100px;
                 height: 100px;
-                background: radial-gradient(var(--yellow-color) 60%, rgba(255, 255, 255, 1) 62%);
+                background: radial-gradient(var(--light-blue-color) 60%, rgba(255, 255, 255, 1) 62%);
                 border-radius: 50%;
                 position: relative;
                 display: block;
-                box-shadow: 0px 0px 25px 3px var(--yellow-color);
+                box-shadow: 0px 0px 25px 3px var(--light-blue-color);
                 &::after{
                     content: "";
                     position: absolute;
@@ -1587,7 +1587,7 @@ form {
         & .counter {
             color: var(--white);
             & .counters {
-                color: var(--yellow-color);
+                color: var(--light-blue-color);
             }
         }
     }
@@ -1647,7 +1647,7 @@ form {
                 margin-bottom: 15px;
             }
             & .address {
-                color: var(--yellow-color);
+                color: var(--light-blue-color);
                 position: relative;
             }
             &::before{

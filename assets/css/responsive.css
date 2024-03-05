@@ -71,7 +71,16 @@
     .videosection .innerbody .innerfluid .play-btn {
         width: 80px;
         height: 80px;
-    };
+    }
+
+    .recentarticle-card .card-body .userdetaisl .username {
+        gap: 12px;
+        font-size: 12px;
+        line-height: 21px;
+    }
+    .recentarticle-card .card-body .userdetaisl .username span::before {
+        left: -6px;
+    }
 	
 }
 
@@ -129,7 +138,7 @@
     }
 
     .header .offcanvas {
-        background-color: var(--secondary)
+        background-color: var(--primary)
     }
 
     .header .offcanvas-header {
@@ -142,6 +151,17 @@
     .header .offcanvas-header .offcanvas-title img {
         height: 100%;
         object-fit: contain;
+    }
+	
+    .header .offcanvas-body .navbar-nav .nav-item .nav-link {
+        color: var(--white);
+    }
+    .header .offcanvas-body .navbar-nav .nav-item .loginbtn {
+        color: var(--white) !important;
+    }
+    
+    .header .offcanvas-body .navbar-nav .nav-item.childlink .nav-link::after, .header .offcanvas-body .navbar-nav .nav-item .loginbtn {
+        border-color: var(--white);
     }
 	
     form .searchgroup .form-control,
@@ -193,9 +213,9 @@
         margin-bottom: 10px;
     }
 
-    .latestblog-section .wigits .card .card-body .trending-topic.popularpost.first li:last-child::before {
+    /* .latestblog-section .wigits .card .card-body .trending-topic.popularpost.first li:last-child::before {
         height: 1px;
-    }
+    } */
 
     .videosection .innerbody {
         min-height: 400px;
@@ -274,7 +294,7 @@
         padding: .3rem .5rem;
     }
 
-    .blogcard.varticalblog {
+    .blogcard.varticalblog,  .blogcard.socialblog  {
         padding: 15px;
     }
 
@@ -300,6 +320,7 @@
 		width: 60px;
 		height: 60px;
 	}
+
 }
 
 @media screen and (max-width:575px){
@@ -342,7 +363,7 @@
         font-size: 12px;
     }
 
-    .blogcard.varticalblog {
+    .blogcard.varticalblog , .blogcard.socialblog {
         padding: 12px;
     }
 
@@ -354,7 +375,7 @@
         padding: 12px;
     }
 
-    .recentarticle-card .card-body .innerbody .toolbtn {
+    .blogcard .toolbtn {
         top: 27px;
         right: 27px;
     }
