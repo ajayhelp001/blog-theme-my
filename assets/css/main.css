@@ -20,11 +20,12 @@
     3.3 Bread Crumb
     3.4 Blog Author
     3.5 User Comment
-    3.6 Gallery
+    3.6  About Us 
     3.7 Video
     3.8 Testimonil 
-    3.9 Page Speed
     4.1 Page Not Found
+    4.2 Contact Page
+    4.3 Accordion
 
 
 
@@ -98,7 +99,7 @@ body{
     font-family: var(--font-League) !important;
     font-size: var(--body-font-size);
     font-weight: var(--fw-400);
-    line-height: 21px;
+    line-height: calc(100% + 10px);
     color: var(--body-text-color);
     transition: var(--ease-transition);
     scroll-behavior: smooth;
@@ -115,13 +116,14 @@ a:hover{
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
 	color: var(--primary);
+    line-height: calc(100% + 10px);
 }
-h1, h2, h3, .h1, .h2, .h3 {
+/* h1, h2, h3, .h1, .h2, .h3 {
     line-height: 1.3;
 }
 h4, h5, h6, .h4, .h5, .h6{
     line-height: 1.4;
-}
+} */
 h1, .h1{
 	font-size: var(--heading-1);
 	font-weight: var(--fw-600);
@@ -155,7 +157,8 @@ img {
     max-width: 100%;
 }
 p {
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 26px;
 }
 input,
 .form-control
@@ -188,8 +191,8 @@ button, input{
 }
 
 img {
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: auto;
 }
 
 /* p {
@@ -379,6 +382,7 @@ font-weight: var(--fw-600);
     font-weight: var(--fw-500);
     color: var(--light-blue-color);
     display: flex;
+    text-transform: uppercase;
 }
 
 .turncate-para{
@@ -2238,40 +2242,92 @@ form .searchgroup:hover {
     gap: 6px;
 }
 
-/* ******* 3.6 Gallery ***** */
+/* ******* 3.6 About Us  ***** */
 
 .aboutus-section .wigits .card .card-body .trending-topic li .topicimg  {
     border-color: var(--light-blue-color);
 }
 
-.gallerysection .gallery-items {
-    overflow: hidden;
-    border-radius: var(--rounded-20);
+.aboutus-section .user-img img {
+    border-radius: var(--rounded-24);
+}
+.aboutus-section .user-img {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+.aboutus-section .user-img::before {
+    content: '';
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    position: absolute;
+    border-radius: var(--rounded-24);
+    z-index: -1;
+}
+.aboutus-section .user-img::before {
+    top: -20px;
+    left: -20px;
+    background-color: var(--primary);
 }
 
-.gallerysection .gallery-items img {
-    transition: var(--ease-transition);
+.clients-section, .clients-section .innerfluid>div {
+    margin-bottom: 15px;
+}
+.clients-section .innerfluid {
+    border-top: 1px solid var(--body-bg-dark);
+    border-bottom: 1px solid var(--body-bg-dark);
 }
 
-.gallerysection .gallery-items .jg-caption {
-    display: flex !important;
+.clients-section .usersimg {
+    border-top: 1px solid var(--body-bg-dark);
+}
+
+.clients-section .client-testimonial .owl-stage-outer {
+    border-radius: var(--rounded-24);
+}
+
+.clients-section .client-testimonial .owl-dots {
+    left: 50%;
+    position: absolute;
+    bottom: -30px;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    height: 100%;
-    opacity: 1 !important;
-    background-color: var(--videobtn);
-    transform: translateY(100%);
-    transition: var(--ease-transition);
-    font-size: 30px;
+    gap: 10px;
+    transform: translateX(-50%);
 }
 
-.gallerysection .gallery-items .jg-caption.jg-caption-visible {
-    transform: translateY(0px);
+.clients-section .client-testimonial .owl-dots button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--body-bg-dark);
 }
 
-.gallerysection .gallery-items:hover img {
-    transform: scale(1.1);
+.clients-section .client-testimonial .owl-dots button.active {
+    background-color: var(--primary);
 }
+
+.clients-section .clientcard {
+    background-color: var(--body-bg-dark);
+}
+
+.clients-section .clientcard .card-body {
+    padding: 40px;
+}
+
+.clients-section .clientcard .card-body .about-text {
+    font-weight: var(--fw-400);
+}
+
+.clients-section .clientcard .card-body .author {
+    border-top: 1px solid var(--body-bg);
+}
+
+.clients-section .clientcard .card-body .rating li {
+    height: 20px;
+    width: 20px;
+}
+
 
 /* ******* 3.7 Video  ***** */  
 
@@ -2457,20 +2513,6 @@ form .searchgroup:hover {
     transform: translateY(0px);
 }
 
-/* ******* 3.9 Page Speed  ***** */
-/* .pagespeed .innerfluid {
-    background: url(../images/cover-bg-2.jpg) no-repeat center;
-    background-size: cover;
-} */
-
-.pagespeed .innerfluid .counter {
-    color: var(--light-blue-color);
-}
-
-/* .pagespeed .innerfluid .counter .counters {
-    color: var(--white);
-} */
-
 
 /* ******* 4.1 404 Page  ***** */
 
@@ -2587,4 +2629,23 @@ form .searchgroup:hover {
 
 .countdown-timer h3 span {
     font-size: 14px;
+}
+
+/* ******* 4.3 Accordion  ***** */
+
+.accordion .accordion-item {
+    border-bottom: 1px solid var(--body-bg-dark);
+    border-radius: 0px;
+}
+
+.accordion .accordion-item .accordion-button::after {
+    transition: var(--ease-transition);
+}
+
+.accordion .accordion-item .accordion-button:not(.collapsed) {
+    color: var(--light-blue-color);
+}
+
+.accordion .accordion-item .accordion-button:not(.collapsed)::after {
+    transform: rotateX(180deg);
 }
