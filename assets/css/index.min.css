@@ -1,0 +1,65 @@
+.contactus-section .contactcard {
+    transition: var(--ease-transition);
+    position: relative;
+    border: 1px solid var(--body-bg-dark);
+    background-color: var(--light-color);
+}
+
+.contactus-section .contactcard .card-body .address {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: var(--ease-transition);
+    margin: 0px;
+}
+
+.contactus-section .contactcard .card-body .address span {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-blue-color);
+    padding: 10px;
+    transition: var(--ease-transition);
+}
+
+.contactus-section .contactcard .card-body .address span img {
+    transition: var(--ease-transition);
+}
+
+.contactus-section .contactcard:hover {
+    background-color: var(--white);
+    transform: translateY(-5px);
+}
+
+.contactus-sections .services .card-body .trending-topic li .content {
+    position: relative;
+    padding-left: 30px;
+}
+
+.contactus-sections .services .card-body .trending-topic li .content::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    padding: 4px;
+    border: 2px solid var(--primary);
+}
+
+.contactus-sections .quotecard .card-body {
+    padding: 40px;
+}
+
+.contactus-sections .quotecard .card-body .quteimg {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+}
