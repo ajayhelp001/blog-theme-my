@@ -171,7 +171,6 @@ textarea{
     color: var(--light-dark);
     font-family: var(--font-League);
     border: 1px solid var(--gray-color);
-    font-size: 14px;
     font-weight: var(--fw-300);
     box-shadow: none;
     border-radius: 10px;
@@ -1473,9 +1472,9 @@ form .searchgroup:hover {
     margin-bottom: 10px !important;
 }
 
-.blogcard.varticalblog .card-body .discribtion {
+/* .blogcard.varticalblog .card-body .discribtion {
     font-size: 14px;
-}
+} */
 
 .blogcard.varticalblog:hover {
     box-shadow: 0 10px 15px -3px var(--dark-shadow), 0 4px 6px -4px var(--dark-shadow);
@@ -2289,7 +2288,7 @@ form .searchgroup:hover {
 .clients-section .client-testimonial .owl-dots {
     left: 50%;
     position: absolute;
-    bottom: -30px;
+    bottom: -35px;
     display: flex;
     align-items: center;
     gap: 10px;
