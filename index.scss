@@ -167,3 +167,73 @@
 //         }
 //     }
 // }
+
+
+.aboutus-section {
+    overflow: hidden;
+    & .innerfluid {
+        position: relative;
+        & .maintext {
+            position: relative;
+            padding-left: 20px;
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 5px;
+                border-radius: 5px;
+                height: 86%;
+                background-color: var(--body-bg-dark);
+            }
+        }
+        & .shape {
+            position: absolute;
+        }
+        & .shape-1, & .shape-2{
+            width: 40px;
+        }
+        & .shape-1{
+            left: -9%;
+            bottom: 9%;
+        }
+        & .shape-2{
+            right: -9%;
+            top: 9%;
+        }
+        & .shape-3{
+            width: 100px;
+            right: -6%;
+            bottom: 10%;
+        }
+    }
+}
+
+.countersection {
+    & .innerfluid {
+        background-color: var(--body-bg-dark);
+        & .countergroup {
+            & .counter{
+                border-right: 1px solid var(--primary-light);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .countersection {
+        & .innerfluid {
+            & .countergroup {
+                & .counter{
+                    &:nth-child(2){
+                        border: none;
+                    }
+                    & .countername {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

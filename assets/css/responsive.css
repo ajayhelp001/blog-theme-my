@@ -81,6 +81,10 @@
     .recentarticle-card .card-body .userdetaisl .username span::before {
         left: -6px;
     }
+    .videosection .innerbody .video-top .heading .arrowimg{
+        height: 40px;
+        width: 40px;
+    }
 	
 }
 
@@ -225,6 +229,11 @@
     .videosection .innerbody .innerfluid .play-btn {
         width: 70px;
         height: 70px;
+    }
+
+    .videosection .innerbody .video-top .heading .arrowimg{
+        height: 35px;
+        width: 35px;
     }
 }
 
@@ -464,5 +473,9 @@
     .clients-section .clientcard .card-body .rating li {
         height: 18px;
         width: 18px;
-    };
+    }
+    .videosection .innerbody .video-top .heading .arrowimg{
+        height: 30px;
+        width: 30px;
+    }
 }
