@@ -1,10 +1,13 @@
 // .contactus-section {
-//     & .contactcard {
-//         transition: var(--ease-transition);
-//         position: relative;
-//         border: 1px solid var(--body-bg-dark);
-//         background-color: var(--light-color);
-//         & .card-body {
+//     & .contactdetails {
+//         display: flex;
+//         flex-direction: column;
+//         gap: 15px;
+//         padding: 15px 0px;
+//         & li{
+//             display: flex;
+//             align-items: center;
+//             gap: 20px;
 //             & .address {
 //                 display: flex;
 //                 align-items: center;
@@ -13,15 +16,15 @@
 //                 transition: var(--ease-transition);
 //                 margin: 0px;
 //                 & span {
-//                     width: 50px;
-//                     height: 50px;
-//                     min-width: 50px;
+//                     width: 35px;
+//                     height: 35px;
+//                     min-width: 35px;
 //                     border-radius: 50%;
 //                     display: flex;
 //                     align-items: center;
 //                     justify-content: center;
 //                     background-color: var(--light-blue-color);
-//                     padding: 10px;
+//                     padding: 7px;
 //                     transition: var(--ease-transition);
 //                     & img {
 //                         transition: var(--ease-transition);
@@ -29,47 +32,94 @@
 //                 }
 //             }
 //         }
-//         &:hover{
-//             background-color: var(--white);
-//             transform: translateY(-5px);
-//         }
 //     }
 // }
 
 // .contactus-sections {
-//     & .services {
-//         & .card-body{
-//             & .trending-topic {
-//                 & li {
-//                     & .content  {
-//                         position: relative;
-//                         padding-left: 30px;
-//                         &::after{
-//                             content: '';
-//                             width: 15px;
-//                             height: 15px;
-//                             border-radius: 50%;
-//                             position: absolute;
-//                             top: 50%;
-//                             transform: translateY(-50%);
-//                             left: 0;
-//                             padding: 4px;
-//                             border: 2px solid var(--primary);
+//     & .contactcard  {
+//         position: relative;
+//         border: 5px solid var(--light-gray-color);
+//         & .userside {
+//             & .userimg {
+//                 max-height: 424px;
+//             }
+//             & .helpcard {
+//                 margin-top: 1.5rem;
+//                 border: 4px solid var(--light-gray-color);
+//                 & .card-body {
+//                     display: flex;
+//                     gap: 15px;
+//                     justify-content: space-between;
+//                     & .arrowimg{
+//                         width: 35px;
+//                         height: 35px;
+//                         min-width: 35px;
+//                         border-radius: 50%;
+//                         padding: 6px;
+//                         display: flex;
+//                         align-items: center;
+//                         justify-content: center;
+//                         border: 1px solid var(--primary);
+//                         transition: var(--ease-transition);
+//                         & img {
+//                             transition: var(--ease-transition);
+//                         }
+//                     }
+//                 }
+//                 &:hover{
+//                     & .card-body{
+//                         & .arrowimg{
+//                             background-color: var(--primary);
+//                             & img {
+//                                 transform: rotate(-45deg);
+//                                 filter: invert(1) brightness(100);
+//                             }
 //                         }
 //                     }
 //                 }
 //             }
 //         }
 //     }
-//     & .quotecard {
-//         & .card-body{
-//             padding: 40px;
-//             & .quteimg {
-//                 height: 50px;
-//                 width: 50px;
-//                 display: inline-block;
+// }
+
+// .form-check {
+//     & .form-check-input {
+//         box-shadow: none;
+//         outline: none;
+//         width: 20px;
+//         height: 20px;
+//         min-height: 20px;
+//         padding: 0px;
+//         overflow: hidden;
+//         background: none;
+//         border-color: var(--primary);
+//         position: relative;
+//         cursor: pointer;
+//         &:focus{
+//             border-color: var(--primary);
+//         }
+//         &::before{
+//             height: 0px;
+//             width: 0px;
+//             content: '';
+//             position: absolute;
+//             border-radius: 2px;
+//             top: 50%;
+//             left: 50%;
+//             transform: translate(-50%, -50%);
+//             background-color: var(--primary);
+//             transition: var(--ease-transition);
+//         }
+//         &:checked{
+//             &::before{
+//                 width: 10px;
+//                 height: 10px;
 //             }
 //         }
+//     }
+//     & .form-check-label {
+//         margin-left: 5px;
+//         cursor: pointer;
 //     }
 // }
 
@@ -169,71 +219,71 @@
 // }
 
 
-.aboutus-section {
-    overflow: hidden;
-    & .innerfluid {
-        position: relative;
-        & .maintext {
-            position: relative;
-            padding-left: 20px;
-            &::before{
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 5px;
-                border-radius: 5px;
-                height: 86%;
-                background-color: var(--body-bg-dark);
-            }
-        }
-        & .shape {
-            position: absolute;
-        }
-        & .shape-1, & .shape-2{
-            width: 40px;
-        }
-        & .shape-1{
-            left: -9%;
-            bottom: 9%;
-        }
-        & .shape-2{
-            right: -9%;
-            top: 9%;
-        }
-        & .shape-3{
-            width: 100px;
-            right: -6%;
-            bottom: 10%;
-        }
-    }
-}
+// .aboutus-section {
+//     overflow: hidden;
+//     & .innerfluid {
+//         position: relative;
+//         & .maintext {
+//             position: relative;
+//             padding-left: 20px;
+//             &::before{
+//                 content: '';
+//                 position: absolute;
+//                 left: 0;
+//                 top: 50%;
+//                 transform: translateY(-50%);
+//                 width: 5px;
+//                 border-radius: 5px;
+//                 height: 86%;
+//                 background-color: var(--body-bg-dark);
+//             }
+//         }
+//         & .shape {
+//             position: absolute;
+//         }
+//         & .shape-1, & .shape-2{
+//             width: 40px;
+//         }
+//         & .shape-1{
+//             left: -9%;
+//             bottom: 9%;
+//         }
+//         & .shape-2{
+//             right: -9%;
+//             top: 9%;
+//         }
+//         & .shape-3{
+//             width: 100px;
+//             right: -6%;
+//             bottom: 10%;
+//         }
+//     }
+// }
 
-.countersection {
-    & .innerfluid {
-        background-color: var(--body-bg-dark);
-        & .countergroup {
-            & .counter{
-                border-right: 1px solid var(--primary-light);
-            }
-        }
-    }
-}
+// .countersection {
+//     & .innerfluid {
+//         background-color: var(--body-bg-dark);
+//         & .countergroup {
+//             & .counter{
+//                 border-right: 1px solid var(--primary-light);
+//             }
+//         }
+//     }
+// }
 
-@media screen and (max-width: 768px){
-    .countersection {
-        & .innerfluid {
-            & .countergroup {
-                & .counter{
-                    &:nth-child(2){
-                        border: none;
-                    }
-                    & .countername {
-                        font-size: 14px;
-                    }
-                }
-            }
-        }
-    }
-}
+// @media screen and (max-width: 768px){
+//     .countersection {
+//         & .innerfluid {
+//             & .countergroup {
+//                 & .counter{
+//                     &:nth-child(2){
+//                         border: none;
+//                     }
+//                     & .countername {
+//                         font-size: 14px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

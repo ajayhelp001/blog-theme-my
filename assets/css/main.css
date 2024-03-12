@@ -61,7 +61,7 @@
     --light-blue-color: #48576e;
     --body-bg: #d0e4e3;
     --body-bg-dark: #b4d2d3;
-
+    --input-bg-color: #fcfcfd;
     --light-color2: #48576e30;
 
 	/* --heading-1: 64px; */
@@ -164,16 +164,16 @@ input,
 .form-control
 select,
 textarea{
-    background: var(--white);
+    background: var(--input-bg-color);
     font-size: var(--body-font-size);
     padding: 10px 15px;
     width: 100%;
     color: var(--light-dark);
     font-family: var(--font-League);
     border: 1px solid var(--gray-color);
-    font-weight: var(--fw-300);
+    font-weight: var(--fw-400);
     box-shadow: none;
-    border-radius: 10px;
+    border-radius: 6px;
     min-height: 50px;
 }
 input:focus,
@@ -182,8 +182,53 @@ textarea:focus{
     outline: none;
 }
 .form-label{
-    margin-bottom: 24px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: var(--fw-600);
 }
+
+
+.form-check .form-check-input {
+    box-shadow: none;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    min-height: 20px;
+    padding: 0px;
+    overflow: hidden;
+    background: none;
+    border-color: var(--primary);
+    position: relative;
+    cursor: pointer;
+}
+
+.form-check .form-check-input:focus {
+    border-color: var(--primary);
+}
+
+.form-check .form-check-input::before {
+    height: 0px;
+    width: 0px;
+    content: "";
+    position: absolute;
+    border-radius: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary);
+    transition: var(--ease-transition);
+}
+
+.form-check .form-check-input:checked::before {
+    width: 10px;
+    height: 10px;
+}
+
+.form-check .form-check-label {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
 
 button, input{
     box-shadow: none;
@@ -223,6 +268,9 @@ img {
 }
 .rounded-20{
     border-radius: var(--rounded-20);
+}
+.rounded-15{
+    border-radius: var(--rounded-15);
 }
 
 .dangerbtn {
@@ -326,7 +374,7 @@ font-weight: var(--fw-600);
 .themebtn{
     border: none;
     background-color: transparent;
-    padding: 10px 20px;
+    padding: 13px 25px;
     border-radius: 8px;
     display: inline-flex;
     gap: 6px;
@@ -1699,6 +1747,12 @@ form .searchgroup:hover {
     max-height: 500px;
     border-radius: 10px;
 }
+.recentarticle-card.blog-details:hover .card-body .articalimg {
+    transform: rotate(0deg);
+}
+.recentarticle-card.blog-details:hover .card-body .articalimg img {
+    transform: scale(1);
+}
 
 .recentarticle-card.blog-details .card-body .innerbody .toolbtn {
     position: relative;
@@ -2189,9 +2243,16 @@ form .searchgroup:hover {
 /* ******* 3.5 User Comment ***** */
 
 .commentcard {
-    border-radius: 10px;
-    border-bottom: 1px solid var(--gray-color) !important;
+    border-bottom: 1px solid var(--gray-color);
+    border-top: none;
+    border-left: none;
+    border-right: none;
     border-radius: 0px;
+    margin-bottom: 8px;
+}
+
+.commentcard .card-body{
+    padding: 28px 0px;
 }
 
 .commentcard .card-body .commentuser {
@@ -2200,8 +2261,10 @@ form .searchgroup:hover {
 }
 
 .commentcard .card-body .replybtn {
-    color: var(--light-blue-color) !important;
+    color: var(--primary) !important;
     border: none;
+    text-transform: uppercase;
+    font-weight: var(--fw-500);
 }
 
 .commentcard .card-body .commentusername {
@@ -2210,8 +2273,10 @@ form .searchgroup:hover {
     gap: 5px;
 }
 
-.commentcard .card-body .commentusername .date {
-    font-weight: var(--fw-400);
+.commentcard .card-body .date {
+    font-weight: var(--fw-500);
+    color: var(--primary);
+    font-size: 12px;
 }
 
 .latestblog-section .wigits .tab-content {
@@ -2247,8 +2312,8 @@ form .searchgroup:hover {
 }
 
 .aboutus-section .user-img .aboutimg {
-    border-radius: var(--rounded-40);
-    transform: rotate(-12deg);
+    /* border-radius: var(--rounded-40); */
+    /* transform: rotate(-12deg); */
 }
 .aboutus-section .user-img {
     position: relative;
@@ -2257,7 +2322,7 @@ form .searchgroup:hover {
     width: 90%;
     display: inline-block;
 }
-.aboutus-section .user-img::before {
+/* .aboutus-section .user-img::before {
     content: '';
     height: 100%;
     width: 100%;
@@ -2265,7 +2330,7 @@ form .searchgroup:hover {
     border-radius: var(--rounded-40);
     z-index: -1;
     transform: rotate(-8deg);
-}
+} */
 .aboutus-section .user-img::before {
     top: -20px;
     right: -20px;
@@ -2274,8 +2339,9 @@ form .searchgroup:hover {
 
 .aboutus-section .user-img .rating {
     position: absolute;
-    right: -20%;
-    bottom: 23%;
+    right: 20px;
+    /* transform: translateX(-50%); */
+    bottom: 20px;
     padding: 15px;
     background: var(--white);
     border-radius: var(--rounded-15);
@@ -2286,6 +2352,56 @@ form .searchgroup:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.aboutus-section {
+    overflow: hidden;
+}
+
+.aboutus-section .innerfluid {
+    position: relative;
+}
+
+.aboutus-section .innerfluid .maintext {
+    position: relative;
+    padding-left: 20px;
+}
+
+.aboutus-section .innerfluid .maintext::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    border-radius: 5px;
+    height: 86%;
+    background-color: var(--body-bg-dark);
+}
+
+.aboutus-section .innerfluid .shape {
+    position: absolute;
+}
+
+.aboutus-section .innerfluid .shape-1,
+.aboutus-section .innerfluid .shape-2 {
+    width: 40px;
+}
+
+.aboutus-section .innerfluid .shape-1 {
+    left: -9%;
+    bottom: 9%;
+}
+
+.aboutus-section .innerfluid .shape-2 {
+    right: -9%;
+    top: 9%;
+}
+
+.aboutus-section .innerfluid .shape-3 {
+    width: 100px;
+    right: -6%;
+    bottom: 10%;
 }
 
 .clients-section, .clients-section .innerfluid>div {
@@ -2581,14 +2697,67 @@ form .searchgroup:hover {
 }
 
 /* ******* 4.2 Contact Page  ***** */
-.contactus-section .contactcard {
-    transition: var(--ease-transition);
+.contactcard {
     position: relative;
-    border: 1px solid var(--body-bg-dark);
-    background-color: var(--light-color);
+    border: 5px solid var(--light-gray-color);
 }
 
-.contactus-section .contactcard .card-body .address {
+.contactus-sections .contactcard .userside .userimg {
+    max-height: 424px;
+}
+
+.contactus-sections .contactcard .userside .helpcard {
+    margin-top: 1.5rem;
+    border: 4px solid var(--light-gray-color);
+}
+
+.contactus-sections .contactcard .userside .helpcard .card-body {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.contactus-sections .contactcard .userside .helpcard .card-body .arrowimg {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    border-radius: 50%;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--primary);
+    transition: var(--ease-transition);
+}
+
+.contactus-sections .contactcard .userside .helpcard .card-body .arrowimg img {
+    transition: var(--ease-transition);
+}
+
+.contactus-sections .contactcard .userside .helpcard:hover .card-body .arrowimg {
+    background-color: var(--primary);
+}
+
+.contactus-sections .contactcard .userside .helpcard:hover .card-body .arrowimg img {
+    transform: rotate(-45deg);
+    filter: invert(1) brightness(100);
+}
+
+
+.contactus-section .contactdetails {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 0px;
+}
+
+.contactus-section .contactdetails li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contactus-section .contactdetails li .address {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2597,54 +2766,21 @@ form .searchgroup:hover {
     margin: 0px;
 }
 
-.contactus-section .contactcard .card-body .address span {
-    width: 50px;
-    height: 50px;
-    min-width: 50px;
+.contactus-section .contactdetails li .address span {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--light-blue-color);
-    padding: 10px;
+    padding: 7px;
     transition: var(--ease-transition);
 }
 
-.contactus-section .contactcard .card-body .address span img {
+.contactus-section .contactdetails li .address span img {
     transition: var(--ease-transition);
-}
-
-.contactus-section .contactcard:hover {
-    background-color: var(--white);
-    transform: translateY(-5px);
-}
-
-.contactus-sections .services .card-body .trending-topic li .content {
-    position: relative;
-    padding-left: 30px;
-}
-
-.contactus-sections .services .card-body .trending-topic li .content::after {
-    content: "";
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    padding: 4px;
-    border: 2px solid var(--primary);
-}
-
-.contactus-sections .quotecard .card-body {
-    padding: 40px;
-}
-
-.contactus-sections .quotecard .card-body .quteimg {
-    height: 50px;
-    width: 50px;
-    display: inline-block;
 }
 
 .map-section iframe {
@@ -2661,6 +2797,13 @@ form .searchgroup:hover {
 
 .countdown-timer h3 span {
     font-size: 14px;
+}
+.countersection .innerfluid {
+    background-color: var(--body-bg-dark);
+}
+
+.countersection .innerfluid .countergroup .counter {
+    border-right: 1px solid var(--primary-light);
 }
 
 /* ******* 4.3 Accordion  ***** */

@@ -245,9 +245,9 @@
 		--heading-5: 16px;
 	}
 	.themebtn{
-		padding: 8px 16px;
+		padding: 10px 20px;
 		font-size: 12px;
-		border-radius: 12px;
+		border-radius: 10px;
     }
 	.heading {
 		gap: 6px;
@@ -301,7 +301,7 @@
     }
 
     .nav-pills .nav-item .nav-link {
-        padding: .3rem .5rem;
+        padding: .3rem 1rem;
     }
 
     .blogcard.varticalblog,  .blogcard.socialblog  {
@@ -326,28 +326,15 @@
         padding: 7px 15px;
     }
 
+    .countersection .innerfluid .countergroup .counter:nth-child(2) {
+        border: none;
+    }
+
+    .countersection .innerfluid .countergroup .counter .countername {
+        font-size: 14px;
+    };
+
     /* ******* 3.6 About Us  ***** */
-    .aboutus-section .user-img {
-        margin: 0px auto;
-        width: calc(100% - 20px);
-    }
-    .aboutus-section .user-img::before {
-        content: '';
-        height: calc(100% - 15px);
-        width: calc(100% - 15px);
-        position: absolute;
-        border-radius: var(--rounded-24);
-        z-index: -1;
-    }
-    .aboutus-section .user-img::before {
-        top: -15px;
-        left: -15px;
-        background-color: var(--primary);
-    }
-
-
-
-
 }
 
 @media screen and (max-width:575px){
@@ -442,7 +429,7 @@
         height: 100px;
     }
 
-    .contactus-section .contactcard .card-body .address {
+    /* .contactus-section .contactcard .card-body .address {
         gap: 15px;
     }
 
@@ -455,7 +442,7 @@
 
     .contactus-sections .quotecard .card-body {
         padding: 30px;
-    }
+    } */
 
     .clients-section .client-testimonial .owl-dots button {
         width: 10px;
